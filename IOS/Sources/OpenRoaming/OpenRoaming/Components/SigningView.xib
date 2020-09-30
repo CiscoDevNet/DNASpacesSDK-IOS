@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SigningView" customModule="OpenRoaming" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="1T4-ZC-CUx" id="WVI-pn-hm5"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="FBO-mP-vBE"/>
+                <outlet property="webView" destination="Rez-Xh-HGo" id="udw-p8-Yi0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rez-Xh-HGo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1T4-ZC-CUx">
+                    <rect key="frame" x="175" y="416" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="Cyt-Dg-rKQ"/>
+                        <constraint firstAttribute="width" constant="64" id="h4O-Zk-S3P"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Rez-Xh-HGo" secondAttribute="bottom" id="0sr-yO-T6T"/>
+                <constraint firstItem="Rez-Xh-HGo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="11C-4z-S6E"/>
+                <constraint firstItem="1T4-ZC-CUx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Msf-5s-JnP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Rez-Xh-HGo" secondAttribute="trailing" id="SEH-it-yDg"/>
+                <constraint firstItem="1T4-ZC-CUx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dYs-3B-Qev"/>
+                <constraint firstItem="Rez-Xh-HGo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tF0-dt-GYE"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="141" y="125"/>
+        </view>
+    </objects>
+</document>

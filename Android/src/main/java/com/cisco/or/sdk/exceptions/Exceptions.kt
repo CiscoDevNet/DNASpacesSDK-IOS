@@ -1,0 +1,15 @@
+package com.cisco.or.sdk.exceptions
+
+class RegisterFailedException : Exception("Fail on register the app on API.")
+class NotInitializedException : Exception("Call OpenRoaming.initialize() to initialize the SDK before continue.")
+class ServiceBadResponseException : Exception("Bad response from service! Please check your internet connectivity.")
+class WifiSuggestionException : Exception("Fail on suggest wifi network for Open Roaming.")
+class Hotspot2NotSupportedException : Exception("Device does not support Hotspot 2.0.")
+class TokenEmptyException : Exception("Fail on get the access token.")
+class LoginFailedException : Exception("Login has failed.")
+class NotSignedException : Exception("Not signed in.")
+class EmptyProfileException : Exception("Not a valid Profile.")
+class PhoneNumberException : Exception("Not a valid Phone Number.")
+class EmailException : Exception("Not a valid E-mail.")
+class PushNotificationNotAssociatedException : Exception("Associate Push Notification needs to be activated for the method to be used")
+class SignedException : Exception("this function cannot be called, because there is already an associated user in this application, please delete that user in order to make this call")

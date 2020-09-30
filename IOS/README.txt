@@ -1,0 +1,1 @@
+This folder contains the iOS SDK code
