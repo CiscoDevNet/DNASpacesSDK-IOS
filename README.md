@@ -6,7 +6,7 @@ This package contains the Binary file for OpenRoaming SDK.
 * On Xcode, go to File > Swift Packages > Add Package Dependency
 * On Choose Project window, select which project you want to install OpenRoaming SDK package and click Next
 * On Choose Package Repository window, insert the **HTTPS** of the repository where OpenRoaming SDK is located and click Next. Example:
-    * `https://github.com/CiscoDevNet/DNASpacesSDK-IOS.git
+    * https://github.com/CiscoDevNet/DNASpacesSDK-IOS.git
 > It might take a while for Xcode to verify the repository.
 * After Xcode verified the repository, at the Choose Package Options screen, inform the release version of the package or branch where the package it is and click Next. Example: 
     * For the HTTPS above the package is located in the `master` branch, so you should select Branch and type its name on the available field.
