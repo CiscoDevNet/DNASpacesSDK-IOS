@@ -1,0 +1,241 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name OpenRoaming
+import CommonCrypto
+import Foundation
+import NetworkExtension
+@_exported import OpenRoaming
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+public typealias RegisterSdkHandler = (OpenRoaming.SigningState?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias ProvisionProfileHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias SigningHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias ServiceHandler = (Foundation.Data?, Foundation.URLResponse?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias UsageStatisticsHandler = (OpenRoaming.UsageStatistics?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias UserDetailsHandler = (OpenRoaming.UserDetail?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias UserAccountDetailsHandler = (OpenRoaming.UserDetail?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias UpdateUserHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias ProfileExistenceHandler = (Swift.Bool?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias PrivacySettingsHandler = (Swift.Bool?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias GetPrivacySettingsHandler = (Swift.Bool?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias AssociatePushHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias DeleteUserHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias DeleteProfileHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias NotificationHandler = (Swift.Bool?, Swift.String?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias LocationHandler = ([(Swift.Double?, Swift.Double?)], OpenRoaming.OpenRoamingError?) -> Swift.Void
+extension UIDevice {
+  public static var modelName: Swift.String
+}
+public class DeviceData {
+  final public let name: Swift.String
+  final public let token: Swift.String
+  final public let deviceType: Swift.String
+  final public let uniqueDeviceId: Swift.String
+  final public let key: Swift.String
+  public init(key: Swift.String, value: Foundation.NSDictionary)
+  @objc deinit
+}
+public enum LoadingState {
+  case started
+  case finished
+  public static func == (a: OpenRoaming.LoadingState, b: OpenRoaming.LoadingState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct UsageStatistics {
+  public var usageStatistics: [OpenRoaming.Stats] {
+    get
+  }
+}
+public struct Stats {
+  public let startTime: Swift.Int64
+  public let endTime: Swift.Int64
+  public let ssid: Swift.String
+  public let device: Swift.String
+  public let duration: Swift.Int64
+  public let dateTime: Swift.String
+}
+@_hasMissingDesignatedInitializers public class CryptoUtilsAES {
+  @objc deinit
+}
+public func showVersion() -> Swift.String
+public func registerSdk(appId: Swift.String, dnaSpacesKey: Swift.String, registerSdkHandler: @escaping OpenRoaming.RegisterSdkHandler)
+public func isSdkRegistered() -> Swift.Bool
+public func associateUser(signingView: OpenRoaming.SigningView, serviceName: Swift.String, signingHandler: @escaping OpenRoaming.SigningHandler)
+public func associateUser(serverAuthCode: Swift.String, serviceName: OpenRoaming.ServiceName, signingHandler: @escaping OpenRoaming.SigningHandler)
+public func associateUser(idType: OpenRoaming.IdType, id: Swift.String, signingHandler: @escaping OpenRoaming.SigningHandler)
+public func installProfile(provisionProfileHandler: @escaping OpenRoaming.ProvisionProfileHandler)
+public func getUserDetails(userDetailsHandler: @escaping OpenRoaming.UserDetailsHandler)
+public func getUsageStatistics(usageStatisticsHandler: @escaping OpenRoaming.UsageStatisticsHandler)
+public func profileExistence(profileExistenceHandler: @escaping OpenRoaming.ProfileExistenceHandler)
+public func setPrivacySettings(acceptPrivacySettings: Swift.Bool, privacySettingsHandler: @escaping OpenRoaming.PrivacySettingsHandler)
+public func getPrivacySettings(getPrivacySettingsHandler: @escaping OpenRoaming.GetPrivacySettingsHandler)
+public func associatePushIdentifier(pushIdentifier: Swift.String, associatePushHandler: @escaping OpenRoaming.AssociatePushHandler)
+public func dissociatePushIdentifier(associatePushHandler: @escaping OpenRoaming.AssociatePushHandler)
+public func isPushAssociated() -> Swift.Bool
+public func deleteUser(deleteUserHandler: @escaping OpenRoaming.DeleteUserHandler)
+public func deleteProfile(deleteProfileHandler: @escaping OpenRoaming.DeleteProfileHandler)
+public func updateUserDetails(userDetail: OpenRoaming.UserDetail, updateUserHandler: @escaping OpenRoaming.UpdateUserHandler)
+public func handleNotification(message: Swift.String, notificationHandler: @escaping OpenRoaming.NotificationHandler)
+public func getLocation(locationHandler: @escaping OpenRoaming.LocationHandler)
+public enum SigningState : Swift.String {
+  case signed
+  case unsigned
+  public var hashValue: Swift.Int {
+    get
+  }
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct UserDetail {
+  public var name: Swift.String
+  public var phone: Swift.String
+  public var email: Swift.String
+  public var age: Swift.Int64
+  public var zipCode: Swift.String
+  public init(data: Foundation.Data) throws
+  public func json() -> Foundation.Data
+}
+public enum SigningType : Swift.String {
+  case signup
+  case signin
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension AES {
+  public enum Error : Swift.Error {
+    case invalidKeySize
+    case emptyStringToEncrypt
+    case generateRandomIVFailed
+    case encryptionFailed
+    case decryptionFailed
+    case dataToStringFailed
+    public static func == (a: OpenRoaming.AES.Error, b: OpenRoaming.AES.Error) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+}
+@_hasMissingDesignatedInitializers public class StringUtils {
+  @objc deinit
+}
+public enum IdType : Swift.String, Swift.CaseIterable {
+  case email
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public typealias AllCases = [OpenRoaming.IdType]
+  public static var allCases: [OpenRoaming.IdType] {
+    get
+  }
+}
+extension AES {
+  public func encrypt(_ string: Swift.String) throws -> Foundation.Data
+  public func decrypt(_ data: Foundation.Data) throws -> Swift.String
+}
+@objc @_inheritsConvenienceInitializers public class SharedPrefs : ObjectiveC.NSObject {
+  final public let PREF_APP_ID: Swift.String
+  final public let PREF_CLIENT_PUBLIC_KEY: Swift.String
+  final public let PREF_CLIENT_PRIVATE_KEY: Swift.String
+  final public let DNA_SPACES_KEY: Swift.String
+  final public let PREF_ACCESS_TOKEN: Swift.String
+  final public let PREF_SDK_TOKEN: Swift.String
+  final public let PREF_TERMS: Swift.String
+  final public let PREF_SIGNING_STATE: Swift.String
+  final public let PREF_SIGNING_SERVICE_NAME: Swift.String
+  final public let DOMAIN_NAME: Swift.String
+  final public let FQDN: Swift.String
+  final public let PREF_PUSH_ID: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+public struct KeyPair {
+}
+@_hasMissingDesignatedInitializers public class CryptoUtilRSA {
+  public static func generateKeyPair(size: Swift.Int = 2048) -> OpenRoaming.KeyPair?
+  public static func exportAsData(publicKey: Swift.String, size: Swift.Int = 2048) -> Foundation.Data?
+  public static func exportAsString(publicKey: Swift.String, size: Swift.Int = 2048) -> Swift.String?
+  public static func keyToString(_ key: Security.SecKey) -> Swift.String?
+  public static func stringToKey(_ b64Key: Swift.String, size: Swift.Int = 2048, keyClass: CoreFoundation.CFString = kSecAttrKeyClassPublic) -> Security.SecKey?
+  public static func decrypt(message: Swift.String, privateKey: Swift.String) -> Foundation.Data?
+  public static func decrypt(base64EncodedMessage: Swift.String, privateKey: Swift.String) -> Foundation.Data?
+  public static func encrypt(message: Swift.String, usingPublicKey: Swift.String) -> Swift.String?
+  public static func encrypt(publicKey: Swift.String, usingPublicKey: Swift.String) -> Swift.String?
+  public func teste2()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SigningView : UIKit.UIView, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate {
+  @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @objc deinit
+}
+public enum OpenRoamingError : Swift.Error {
+  case NotInitialized
+  case TermsNotAccepted
+  case ServiceBadResponse
+  case RegisterNotAuthorized
+  case Hotspot2NotSupported
+  case TokenEmpty
+  case LoginFailed
+  case NotSigned
+  case InvalidEmail
+  case InvalidPhoneNumber
+  case DeviceCurrentDeleteSelfException
+  case PushNotificationNotAssociatedException
+  public var message: Swift.String {
+    get
+  }
+  public static func == (a: OpenRoaming.OpenRoamingError, b: OpenRoaming.OpenRoamingError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct AES {
+  public let key: Foundation.Data
+  public init(keyString: Swift.String) throws
+}
+@_hasMissingDesignatedInitializers public class NetworkUtils {
+  public static func isConnectedToNetwork() -> Swift.Bool
+  public static func installProfile(data: Foundation.Data?, handler: @escaping (OpenRoaming.OpenRoamingError?) -> Swift.Void)
+  @objc deinit
+}
+public enum ServiceName : Swift.String, Swift.CaseIterable {
+  case apple
+  case google
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [OpenRoaming.ServiceName]
+  public static var allCases: [OpenRoaming.ServiceName] {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class User {
+  final public let userId: Swift.String
+  final public let oauthIds: Swift.Array<Swift.String>
+  final public let devices: Swift.Array<OpenRoaming.DeviceData>
+  public var details: OpenRoaming.UserDetail?
+  final public let userIdentity: Swift.String
+  final public let serviceName: OpenRoaming.ServiceName
+  final public let name: Swift.String
+  final public let imageName: Swift.String
+  @objc deinit
+}
