@@ -1,4 +1,4 @@
-# OpenRoaming Package
+# Cisco DNA Spaces SDK for IOS
 
 This package contains the Binary file for OpenRoaming SDK.
 
