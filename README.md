@@ -6,13 +6,13 @@ This package contains the Binary file for Cisco DNA Spaces SDK.
 * On Xcode, go to File > Swift Packages > Add Package Dependency
 * On Choose Project window, select which project you want to install Cisco DNA Spaces SDK package and click Next
 * On Choose Package Repository window, insert the **HTTPS** of the repository where Cisco DNA Spaces SDK is located and click Next. Example:
-    * https://github.com/CiscoDevNet/DNASpacesSDK-IOS.git
-> It might take a while for Xcode to verify the repository.
+   *  https://github.com/CiscoDevNet/DNASpacesSDK-IOS.git
+  > It might take a while for Xcode to verify the repository.
 * After Xcode verified the repository, at the Choose Package Options screen, inform the release version of the package or branch where the package it is and click Next. Example: 
     * For the HTTPS above the package is located in the `master` branch, so you should select Branch and type its name on the available field.
-> It might take a while for Xcode to verify the package, so you will not be able to add these informations immediately. 
+  > It might take a while for Xcode to verify the package, so you will not be able to add these informations immediately. 
 * Then Xcode will open the Add Package to App screen and after a few minutes, Cisco DNA Spaces SDK package will be installed in your App.
-> Also, please make sure that Cisco DNA Spaces SDK Package is also added on Build Phases > Link Binary with Libraries.
+  > Please make sure that Cisco DNA Spaces SDK Package is also added on Build Phases > Link Binary with Libraries.
 
 ## Test whether the SDK was installed correctly
 * Go to your project
@@ -28,3 +28,7 @@ If the installation was not successful, to redo the procedures you maybe will ha
 * Go to Swift Packages
 * You will see OpenRoaming, such as its Version Rules and Location
 * Select OpenRoaming and click on  — below
+
+
+## Unable to install "App" error
+If you face this error, please check out this link: https://pspdfkit.com/guides/ios/current/knowledge-base/library-not-found-swiftpm/
