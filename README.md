@@ -19,14 +19,6 @@ This package contains the Binary file for Cisco DNA Spaces SDK.
   * `let version = OpenRoaming.showVersion()`
 * Check the “version” value. If it is null, redo all the procedures above, otherwise it is working correctly.
 
-## Removing the SDK package from your project
-If the installation was not successful, to redo the procedures you maybe will have to remove the package from your project.
-
-* On the File Manager, click on your project `.xcodeproj` file
-* Go to Swift Packages
-* You will see OpenRoaming, such as its Version Rules and Location
-* Select OpenRoaming and click on  — below
-
 
 ## Unable to install "App" error
 If you face this error, please check out this link: https://pspdfkit.com/guides/ios/current/knowledge-base/library-not-found-swiftpm/
