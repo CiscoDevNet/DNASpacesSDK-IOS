@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OpenRoaming
 import CommonCrypto
 import Foundation
@@ -41,10 +41,10 @@ public enum LoadingState {
   case started
   case finished
   public static func == (a: OpenRoaming.LoadingState, b: OpenRoaming.LoadingState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public struct UsageStatistics {
   public var usageStatistics: [OpenRoaming.Stats] {
@@ -68,8 +68,8 @@ public enum SigningState : Swift.String {
   public var hashValue: Swift.Int {
     get
   }
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -106,8 +106,8 @@ public struct UserDetail {
 public enum SigningType : Swift.String {
   case signup
   case signin
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -121,10 +121,10 @@ extension AES {
     case decryptionFailed
     case dataToStringFailed
     public static func == (a: OpenRoaming.AES.Error, b: OpenRoaming.AES.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
 }
 @_hasMissingDesignatedInitializers public class StringUtils {
@@ -132,13 +132,13 @@ extension AES {
 }
 public enum IdType : Swift.String, Swift.CaseIterable {
   case email
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
   public init?(rawValue: Swift.String)
   public typealias AllCases = [OpenRoaming.IdType]
+  public typealias RawValue = Swift.String
   public static var allCases: [OpenRoaming.IdType] {
+    get
+  }
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -189,6 +189,7 @@ public enum OpenRoamingError : Swift.Error {
   case ServiceBadResponse
   case RegisterNotAuthorized
   case Hotspot2NotSupported
+  case IOSVersionNotSupported
   case TokenEmpty
   case LoginFailed
   case NotSigned
@@ -200,10 +201,10 @@ public enum OpenRoamingError : Swift.Error {
     get
   }
   public static func == (a: OpenRoaming.OpenRoamingError, b: OpenRoaming.OpenRoamingError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public struct AES {
   public let key: Foundation.Data
@@ -217,13 +218,13 @@ public struct AES {
 public enum ServiceName : Swift.String, Swift.CaseIterable {
   case apple
   case google
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
   public init?(rawValue: Swift.String)
   public typealias AllCases = [OpenRoaming.ServiceName]
+  public typealias RawValue = Swift.String
   public static var allCases: [OpenRoaming.ServiceName] {
+    get
+  }
+  public var rawValue: Swift.String {
     get
   }
 }
