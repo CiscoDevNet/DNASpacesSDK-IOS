@@ -111,7 +111,7 @@ public struct UserDetail {
   public var name: Swift.String
   public var phone: Swift.String
   public var email: Swift.String
-  public var age: Swift.Int64
+  public var age: Swift.String
   public var zipCode: Swift.String
   public init(data: Foundation.Data) throws
   public func json() -> Foundation.Data
@@ -212,6 +212,7 @@ public enum OpenRoamingError : Swift.Error {
   case InvalidPhoneNumber
   case DeviceCurrentDeleteSelfException
   case PushNotificationNotAssociatedException
+  case UserAlreadyAssociatedException
   public var message: Swift.String {
     get
   }
