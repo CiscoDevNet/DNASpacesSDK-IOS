@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios12.1 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OpenRoaming
 import CommonCrypto
 import Foundation
@@ -75,7 +75,7 @@ public enum SigningState : Swift.String {
   }
 }
 public func showVersion() -> Swift.String
-public func registerSdk(appId: Swift.String, dnaSpacesKey: Swift.String, registerSdkHandler: @escaping OpenRoaming.RegisterSdkHandler)
+public func registerSdk(appId: Swift.String, dnaSpacesKey: Swift.String, region: OpenRoaming.Region, registerSdkHandler: @escaping OpenRoaming.RegisterSdkHandler)
 public func isSdkRegistered() -> Swift.Bool
 public func associatePushIdentifier(pushIdentifier: Swift.String, associatePushHandler: @escaping OpenRoaming.AssociatePushHandler)
 public func dissociatePushIdentifier(associatePushHandler: @escaping OpenRoaming.AssociatePushHandler)
@@ -111,7 +111,7 @@ public struct UserDetail {
   public var name: Swift.String
   public var phone: Swift.String
   public var email: Swift.String
-  public var age: Swift.Int64
+  public var age: Swift.String
   public var zipCode: Swift.String
   public init(data: Foundation.Data) throws
   public func json() -> Foundation.Data
@@ -172,6 +172,7 @@ extension AES {
   final public let DOMAIN_NAME: Swift.String
   final public let FQDN: Swift.String
   final public let PREF_PUSH_ID: Swift.String
+  final public let REGION: Swift.String
   @objc override dynamic public init()
   @objc deinit
 }
@@ -211,6 +212,7 @@ public enum OpenRoamingError : Swift.Error {
   case InvalidPhoneNumber
   case DeviceCurrentDeleteSelfException
   case PushNotificationNotAssociatedException
+  case UserAlreadyAssociatedException
   public var message: Swift.String {
     get
   }
