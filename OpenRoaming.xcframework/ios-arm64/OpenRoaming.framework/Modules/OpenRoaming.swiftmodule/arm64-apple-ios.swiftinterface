@@ -213,7 +213,7 @@ public enum OpenRoamingError : Swift.Error {
   case DeviceCurrentDeleteSelfException
   case PushNotificationNotAssociatedException
   case UserAlreadyAssociatedException
-  case ProfileIsDeleted
+  case ProfileIsAlreadyDeleted
   public var message: Swift.String {
     get
   }
