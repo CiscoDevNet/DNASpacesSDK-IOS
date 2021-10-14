@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		XjtJh69Q0OG1Sy018PUING5+pn8=
+		/INyxkmzrlNEH2p7zo8fgYSlEuI=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		XjtJh69Q0OG1Sy018PUING5+pn8=
+		/INyxkmzrlNEH2p7zo8fgYSlEuI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>SigningView.nib</key>
 		<data>
-		oUgPHaxJlQxzNL2eRX28Zps8rhU=
+		fdxnDRIvxVMYuAn2P6Cme11Xp+Q=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -105,7 +105,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QhmYs3ng56wdecZiGtWoYD/E5QYWMq7F3P79/m7M4h4=
+			IoDP1dYzClgW97h7eT0lG2D4hXSKGg3VxIGkVPCb1Wo=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftdoc</key>
@@ -126,7 +126,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QhmYs3ng56wdecZiGtWoYD/E5QYWMq7F3P79/m7M4h4=
+			IoDP1dYzClgW97h7eT0lG2D4hXSKGg3VxIGkVPCb1Wo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -140,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gFPY9mjmIeMqnvucRFC0bOqwiWJRia+7mGRDfWV7vL4=
+			joP7ZNECiyxsuu1shhYUfMpOlrBTWaTqx4tc/hkpIGI=
 			</data>
 		</dict>
 	</dict>
