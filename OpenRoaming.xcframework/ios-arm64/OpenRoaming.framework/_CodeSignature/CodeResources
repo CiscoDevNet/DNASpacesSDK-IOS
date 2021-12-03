@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/OpenRoaming-Swift.h</key>
 		<data>
-		QIVQsNaXTqhYgiMOPvqX/Lxl4+c=
+		GLUAT7nrZMaRMljfHTbIMiizBSU=
 		</data>
 		<key>Headers/OpenRoaming.h</key>
 		<data>
@@ -14,39 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		k3DiG4CL8ozoZuw8OvNKT4iH7Vw=
+		j4xO2F/loradYdMA9/Vjt0QtN+0=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		t73C5c/tZ2B1P4KBLj7NZw92krQ=
+		DoVmWbbuYF8JKIrR1+qAwK3pUGo=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		t73C5c/tZ2B1P4KBLj7NZw92krQ=
+		DoVmWbbuYF8JKIrR1+qAwK3pUGo=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		3kYtfwp/BegncZFl/A9YqBEXpzI=
+		oh/sAgxMnQEoptleesiWvNi4yCg=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		zQxQUMz7eW/Z4XDLFNirr4a1NZQ=
+		esRRtb4bkdeablDk3dfGDFk9TzU=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		sgvkYPTKwf/FfnazJ1kjxblwk1w=
+		E2CQokTpBlaencSHn/QnCFAGzCg=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		3kYtfwp/BegncZFl/A9YqBEXpzI=
+		oh/sAgxMnQEoptleesiWvNi4yCg=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		zQxQUMz7eW/Z4XDLFNirr4a1NZQ=
+		esRRtb4bkdeablDk3dfGDFk9TzU=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		sgvkYPTKwf/FfnazJ1kjxblwk1w=
+		E2CQokTpBlaencSHn/QnCFAGzCg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>SigningView.nib</key>
 		<data>
-		InIu60/3OGTBvUnzC/S9dkYCoCw=
+		6TrSoAGi2cin21J91laIMhCK0LQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -63,7 +63,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lgEsOQ19lStI7EiHwEtaHyEC5jtBklL6/JATrufIRno=
+			W7fpT/wI/FVQOz4/mj9iAIuKH5bANaooDpgZfl8LF2g=
 			</data>
 		</dict>
 		<key>Headers/OpenRoaming.h</key>
@@ -77,56 +77,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dc0/bwRq6UWm9pDKvoIVMjT/2+dKscfdSyXZCXY0o7M=
+			zKfyqtzwsbNAYYtUzbXl0w8a4HVwVNaoyynBTs2ZIjQ=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dc0/bwRq6UWm9pDKvoIVMjT/2+dKscfdSyXZCXY0o7M=
+			zKfyqtzwsbNAYYtUzbXl0w8a4HVwVNaoyynBTs2ZIjQ=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OAKd05m/IrSjA7x0UQXu8wABbNRhT9bc8IYzacxTqNo=
+			jQYRFlWswOe85Yl9QX+A/NTfoPiAx6XOoGK+ddmOf3o=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kEwX8KgnMWbuRjy0rc/IPqHWwyOsJkdd2c4rvV69F20=
+			stdemO8Soo+Xy+hKci0k4cls+v/1Ct+9ynQS0Gnbp3o=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/DQUeHR0wa4gnofsat7yBbaf850ESnZuCiAGvdNDOW0=
+			7PZxUevzunk3J4ViPdsI++QX1g6SWLjs4xSREMAQelY=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OAKd05m/IrSjA7x0UQXu8wABbNRhT9bc8IYzacxTqNo=
+			jQYRFlWswOe85Yl9QX+A/NTfoPiAx6XOoGK+ddmOf3o=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kEwX8KgnMWbuRjy0rc/IPqHWwyOsJkdd2c4rvV69F20=
+			stdemO8Soo+Xy+hKci0k4cls+v/1Ct+9ynQS0Gnbp3o=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/DQUeHR0wa4gnofsat7yBbaf850ESnZuCiAGvdNDOW0=
+			7PZxUevzunk3J4ViPdsI++QX1g6SWLjs4xSREMAQelY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -140,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			n9Uosfy2MHQ6pD/kEYH570xRY30n7mKFQlQmxFe3tU0=
+			SyZcmGoZdQ8xD1WbKkls0gb27qPK8noyaGbembz8dbQ=
 			</data>
 		</dict>
 	</dict>
