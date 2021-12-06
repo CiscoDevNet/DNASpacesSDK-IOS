@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/OpenRoaming-Swift.h</key>
 		<data>
-		QIVQsNaXTqhYgiMOPvqX/Lxl4+c=
+		GLUAT7nrZMaRMljfHTbIMiizBSU=
 		</data>
 		<key>Headers/OpenRoaming.h</key>
 		<data>
@@ -14,39 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CB8IbgApqYtDza/Q5/PZxJZsV4g=
+		AdUv/SjS4OKhnEnD2XQdo7xx6H8=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		xatRjnzN5LMdxCKSNZ+2ehDJw+Q=
+		jVQnU48BhGbre6huiwY6ilOzRXw=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		xatRjnzN5LMdxCKSNZ+2ehDJw+Q=
+		jVQnU48BhGbre6huiwY6ilOzRXw=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ktxfwwWDLo+yiO02afL/hNbWXJo=
+		DJ45uq21KdHpRr+Bi63NANfCaLE=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		+EzSRdcytShGgYI6N8Hy6uAcu8I=
+		ggRJCCzfn3EWnnmY+Vft/TMKE9k=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6NtdiQ1gzenJBXtCw/8mgNJ1ISE=
+		fKKwfzu07XtzHrMp/9EU9/fnYqs=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		ktxfwwWDLo+yiO02afL/hNbWXJo=
+		DJ45uq21KdHpRr+Bi63NANfCaLE=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		+EzSRdcytShGgYI6N8Hy6uAcu8I=
+		ggRJCCzfn3EWnnmY+Vft/TMKE9k=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		6NtdiQ1gzenJBXtCw/8mgNJ1ISE=
+		fKKwfzu07XtzHrMp/9EU9/fnYqs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>SigningView.nib</key>
 		<data>
-		HH7IwYMCdZTpPC9VI75brr1/wHQ=
+		6TrSoAGi2cin21J91laIMhCK0LQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -63,7 +63,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lgEsOQ19lStI7EiHwEtaHyEC5jtBklL6/JATrufIRno=
+			W7fpT/wI/FVQOz4/mj9iAIuKH5bANaooDpgZfl8LF2g=
 			</data>
 		</dict>
 		<key>Headers/OpenRoaming.h</key>
@@ -77,56 +77,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9EJw3qCQmYoRlNmlbtgEPMUSlbt2SvoNWfgdg6ugphI=
+			MtRGdHrgds+qTg7zeI/LbRY//Zef/WYDVoXz2aoG8vg=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9EJw3qCQmYoRlNmlbtgEPMUSlbt2SvoNWfgdg6ugphI=
+			MtRGdHrgds+qTg7zeI/LbRY//Zef/WYDVoXz2aoG8vg=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rxQUn75UbUJfIviOkwKTEuuDO8wOgqEZJjgjhiWfrug=
+			ULMR8FI7LQ/vrI3MVA9+DUY2AthpqxuzToxlI2A2W+g=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Ob8sXZyUJvuTUrwy6m+vkzhxngH2eO5AOXn+/tov2E=
+			7kE4te3TLN+hYGNzm0AA43bliQfkgdszBdgWcEt+0VI=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EMbDkjl6/VX+83kYusM5oWxmm55RlT4PiStyT0KrEHY=
+			s7d5K8e8QA2KoS1qk5bKBj1r7znNl8xnaUV8ni8UF74=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rxQUn75UbUJfIviOkwKTEuuDO8wOgqEZJjgjhiWfrug=
+			ULMR8FI7LQ/vrI3MVA9+DUY2AthpqxuzToxlI2A2W+g=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Ob8sXZyUJvuTUrwy6m+vkzhxngH2eO5AOXn+/tov2E=
+			7kE4te3TLN+hYGNzm0AA43bliQfkgdszBdgWcEt+0VI=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EMbDkjl6/VX+83kYusM5oWxmm55RlT4PiStyT0KrEHY=
+			s7d5K8e8QA2KoS1qk5bKBj1r7znNl8xnaUV8ni8UF74=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -140,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AaFz9e+PdHtYYJBuXFbDLui8E/Uwo7nIhygGYu1V2Z4=
+			SyZcmGoZdQ8xD1WbKkls0gb27qPK8noyaGbembz8dbQ=
 			</data>
 		</dict>
 	</dict>
