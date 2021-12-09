@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target x86_64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OpenRoaming
 import CommonCrypto
 import Foundation
@@ -9,7 +9,6 @@ import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
-import _Concurrency
 public typealias RegisterSdkHandler = (OpenRoaming.SigningState?, OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias ProvisionProfileHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias SigningHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
@@ -26,8 +25,8 @@ public typealias DeleteUserHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Vo
 public typealias DeleteProfileHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias NotificationHandler = (Swift.Bool?, Swift.String?, OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias LocationHandler = ([(Swift.Double?, Swift.Double?)], OpenRoaming.OpenRoamingError?) -> Swift.Void
-extension UIKit.UIDevice {
-  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
+extension UIDevice {
+  public static let modelName: Swift.String
 }
 public class DeviceData {
   final public let name: Swift.String
@@ -126,7 +125,7 @@ public enum SigningType : Swift.String {
     get
   }
 }
-extension OpenRoaming.AES {
+extension AES {
   public enum Error : Swift.Error {
     case invalidKeySize
     case emptyStringToEncrypt
@@ -156,7 +155,7 @@ public enum IdType : Swift.String, Swift.CaseIterable {
     get
   }
 }
-extension OpenRoaming.AES {
+extension AES {
   public func encrypt(_ string: Swift.String) throws -> Foundation.Data
   public func decrypt(_ data: Foundation.Data) throws -> Swift.String
 }
@@ -191,11 +190,11 @@ public struct KeyPair {
   public static func encrypt(publicKey: Swift.String, usingPublicKey: Swift.String) -> Swift.String?
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SigningView : UIKit.UIView, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate {
-  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
-  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SigningView : UIKit.UIView, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate {
+  @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
   @objc deinit
 }
 public enum OpenRoamingError : Swift.Error {
