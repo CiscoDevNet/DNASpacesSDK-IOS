@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target x86_64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OpenRoaming
 import CommonCrypto
 import Foundation
@@ -24,6 +24,7 @@ public typealias GetPrivacySettingsHandler = (Swift.Bool?, OpenRoaming.OpenRoami
 public typealias AssociatePushHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias DeleteUserHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias DeleteProfileHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias UserTagsHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias NotificationHandler = (Swift.Bool?, Swift.String?, OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias LocationHandler = ([(Swift.Double?, Swift.Double?)], OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias LocationDetailsHandler = (OpenRoaming.LocationDetails?, OpenRoaming.OpenRoamingError?) -> Swift.Void
@@ -64,6 +65,18 @@ public struct Stats {
 @_hasMissingDesignatedInitializers public class CryptoUtilsAES {
   @objc deinit
 }
+public struct LocationDetails {
+  public var currentLocation: Swift.String
+  public var type: Swift.String
+  public var path: Swift.String
+  public var x: Swift.Int
+  public var y: Swift.Int
+  public var mapInfo: Foundation.NSDictionary
+  public var nearestAPs: Swift.String
+  public var timeZoneId: Swift.String
+  public init(data: Foundation.Data) throws
+  public func json() -> Foundation.Data
+}
 public enum SigningState : Swift.String {
   case signed
   case unsigned
@@ -88,6 +101,8 @@ public func associateUser(serverAuthCode: Swift.String, serviceName: OpenRoaming
 public func associateUser(idType: OpenRoaming.IdType, id: Swift.String, signingHandler: @escaping OpenRoaming.SigningHandler)
 public func updateUserDetails(userDetail: OpenRoaming.UserDetail, updateUserHandler: @escaping OpenRoaming.UpdateUserHandler)
 public func getUserDetails(userDetailsHandler: @escaping OpenRoaming.UserDetailsHandler)
+public func setUserTags(tags: Swift.Array<Swift.String>, userTagsHandler: @escaping OpenRoaming.UserTagsHandler)
+public func deleteUserTags(tags: Swift.Array<Swift.String>, userTagsHandler: @escaping OpenRoaming.UserTagsHandler)
 public func deleteUser(deleteUserHandler: @escaping OpenRoaming.DeleteUserHandler)
 public func deleteProfile(deleteProfileHandler: @escaping OpenRoaming.DeleteProfileHandler)
 public func getPrivacySettings(getPrivacySettingsHandler: @escaping OpenRoaming.GetPrivacySettingsHandler)
@@ -142,18 +157,6 @@ extension OpenRoaming.AES {
       get
     }
   }
-}
-public struct LocationDetails {
-  public var currentLocation: Swift.String
-  public var type: Swift.String
-  public var path: Swift.String
-  public var x: Swift.Int
-  public var y: Swift.Int
-  public var mapInfo: Foundation.NSDictionary
-  public var nearestAPs: Swift.String
-  public var timeZoneId: Swift.String
-  public init(data: Foundation.Data) throws
-  public func json() -> Foundation.Data
 }
 @_hasMissingDesignatedInitializers public class StringUtils {
   @objc deinit
