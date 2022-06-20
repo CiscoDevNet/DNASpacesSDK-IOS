@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target x86_64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OpenRoaming
 import CommonCrypto
 import Foundation
@@ -26,6 +26,7 @@ public typealias DeleteUserHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Vo
 public typealias DeleteProfileHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias NotificationHandler = (Swift.Bool?, Swift.String?, OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias LocationHandler = ([(Swift.Double?, Swift.Double?)], OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias LocationDetailsHandler = (OpenRoaming.LocationDetails?, OpenRoaming.OpenRoamingError?) -> Swift.Void
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
 }
@@ -63,6 +64,18 @@ public struct Stats {
 @_hasMissingDesignatedInitializers public class CryptoUtilsAES {
   @objc deinit
 }
+public struct LocationDetails {
+  public var currentLocation: Swift.String
+  public var type: Swift.String
+  public var path: Swift.String
+  public var x: Swift.Int
+  public var y: Swift.Int
+  public var mapInfo: Foundation.NSDictionary
+  public var nearestAPs: Swift.String
+  public var timeZoneId: Swift.String
+  public init(data: Foundation.Data) throws
+  public func json() -> Foundation.Data
+}
 public enum SigningState : Swift.String {
   case signed
   case unsigned
@@ -93,6 +106,7 @@ public func getPrivacySettings(getPrivacySettingsHandler: @escaping OpenRoaming.
 public func setPrivacySettings(acceptPrivacySettings: Swift.Bool, privacySettingsHandler: @escaping OpenRoaming.PrivacySettingsHandler)
 public func getUsageStatistics(usageStatisticsHandler: @escaping OpenRoaming.UsageStatisticsHandler)
 public func getLocation(locationHandler: @escaping OpenRoaming.LocationHandler)
+public func getLocationDetails(locationDetailsHandler: @escaping OpenRoaming.LocationDetailsHandler)
 public func installProfile(provisionProfileHandler: @escaping OpenRoaming.ProvisionProfileHandler)
 public func profileExistence(profileExistenceHandler: @escaping OpenRoaming.ProfileExistenceHandler)
 public enum Region : Swift.String, Swift.CaseIterable {
@@ -146,6 +160,7 @@ extension OpenRoaming.AES {
 }
 public enum IdType : Swift.String, Swift.CaseIterable {
   case email
+  case loyalty
   public init?(rawValue: Swift.String)
   public typealias AllCases = [OpenRoaming.IdType]
   public typealias RawValue = Swift.String
