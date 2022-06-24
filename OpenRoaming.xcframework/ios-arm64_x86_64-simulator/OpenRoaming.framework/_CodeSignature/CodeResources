@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		Q1+vyxS80ffmEAWKWVg/72RDc54=
+		m1TmjGdIK/8hYRncAcNzul753es=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		YxSryOirzwR+tW+SEec+C6kpdMc=
+		OI7HgAwVaCas6Bv03FcFLE6Or7M=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		RMGyYVHsnp3dR3PpDIw/DZ/Dfx4=
+		pDsg8bB3g53AV4z1PDUdNXsjqeU=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		x1/QadFnichZ6DoiO1b17bjFziE=
+		hTTjyOFAfPKHlUYnyZRNK2hxdvU=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uGF/IGAXq1pHJbg2V+iK58CKB6o=
+		YRtP/zWalBkvdCUjA6bqyIoD9bg=
 		</data>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		992RB3S1bq4WcV4LVEgj6JkRito=
+		C5cIHPeVP2zbOdC//+hGnWYFZ0c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -77,14 +77,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wh6vn/1/fA/wYYao/UMzN/RduRB8dFEMOVTxcMs6ARA=
+			zuHNfbVCvUOw6YqxH1O1ilAfBcy4PZSyWGj5b59a9FI=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oKhfqncnA/9037ZaBJW77cbKWUbXDj0RwviN84A3WGs=
+			sHvFgubUPBNW27a2I8QhjtKA8jZjpOpR9NrHvb9A6l4=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SG/1RAzKpfyvvcgph1Z4tsCYBjb13byhaSE19wP5Xwg=
+			NIpI6XDbsmEBnC/S0ITL8yc5X8p8He9yeyi6/3jpxjc=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O5kXsnYIXc85qGETpH+4oEVJh1CU5t+rGy840q+bQBY=
+			Wf0eIyY+LL43Q0PRXFTc7LKFirdOSnmtjoEQ1HtHPiU=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -119,14 +119,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v1LdIlMmDv4iHLQOSAq13se+rBiPFCzdCrz03z6knHY=
+			Wb8ewkLpTI+f/qDF7V3tIuq5eQ0FJcQziG3LZi/ppSI=
 			</data>
 		</dict>
 		<key>Modules/OpenRoaming.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yxhZJpQoE8GW6JtVA0vwWjU7Yp0z+Pql8Olyckr6VEE=
+			AouFzIz/I04vkT9eRtv5L4BMGLwjA+4aYdLBYkdMXsU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -11,6 +11,7 @@ import UIKit
 import WebKit
 import _Concurrency
 public typealias RegisterSdkHandler = (OpenRoaming.SigningState?, OpenRoaming.OpenRoamingError?) -> Swift.Void
+public typealias RefreshSdkHandler = (Swift.String?, OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias ProvisionProfileHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias SigningHandler = (OpenRoaming.OpenRoamingError?) -> Swift.Void
 public typealias ServiceHandler = (Foundation.Data?, Foundation.URLResponse?, OpenRoaming.OpenRoamingError?) -> Swift.Void
