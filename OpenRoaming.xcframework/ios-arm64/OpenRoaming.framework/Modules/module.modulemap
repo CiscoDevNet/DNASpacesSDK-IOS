@@ -6,6 +6,6 @@ framework module OpenRoaming {
 }
 
 module OpenRoaming.Swift {
-    header "OpenRoaming-Swift.h"
-    requires objc
+  header "OpenRoaming-Swift.h"
+  requires objc
 }
