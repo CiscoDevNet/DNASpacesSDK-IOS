@@ -14,6 +14,7 @@ FOUNDATION_EXPORT double OpenRoamingVersionNumber;
 //! Project version string for OpenRoaming.
 FOUNDATION_EXPORT const unsigned char OpenRoamingVersionString[];
 
+
 // In this header, you should import all the public headers of your framework using statements like #import
 
 
