@@ -1,7 +1,7 @@
 framework module OpenRoaming {
   umbrella header "OpenRoaming.h"
-
   export *
+
   module * { export * }
 }
 
