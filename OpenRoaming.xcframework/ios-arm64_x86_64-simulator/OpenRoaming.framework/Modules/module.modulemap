@@ -1,0 +1,11 @@
+framework module OpenRoaming {
+  umbrella header "OpenRoaming.h"
+  export *
+
+  module * { export * }
+}
+
+module OpenRoaming.Swift {
+  header "OpenRoaming-Swift.h"
+  requires objc
+}
