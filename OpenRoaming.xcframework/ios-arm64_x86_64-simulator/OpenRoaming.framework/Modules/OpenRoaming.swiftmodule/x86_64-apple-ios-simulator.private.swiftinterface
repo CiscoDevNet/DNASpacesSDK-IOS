@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target x86_64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name OpenRoaming
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target x86_64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name OpenRoaming
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import CommonCrypto
 import Foundation
 import NetworkExtension
@@ -39,7 +40,7 @@ public struct ProfileVersion {
   public init(data: Foundation.Data) throws
 }
 extension UIKit.UIDevice {
-  @_Concurrency.MainActor(unsafe) public static let modelName: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static let modelName: Swift.String
 }
 public class DeviceData {
   final public let name: Swift.String
@@ -132,7 +133,7 @@ public enum Region : Swift.String, Swift.CaseIterable {
   public init?(rawValue: Swift.String)
   public typealias AllCases = [OpenRoaming.Region]
   public typealias RawValue = Swift.String
-  public static var allCases: [OpenRoaming.Region] {
+  nonisolated public static var allCases: [OpenRoaming.Region] {
     get
   }
   public var rawValue: Swift.String {
@@ -150,6 +151,9 @@ public struct UserDetail {
   public var tags: Swift.Array<Swift.String>
   public init(data: Foundation.Data) throws
   public func json() throws -> Foundation.Data
+}
+extension Swift.String {
+  public func isNotNullOrEmpty() -> Swift.Bool
 }
 public enum SigningType : Swift.String {
   case signup
@@ -187,7 +191,7 @@ public enum IdType : Swift.String, Swift.CaseIterable {
   public init?(rawValue: Swift.String)
   public typealias AllCases = [OpenRoaming.IdType]
   public typealias RawValue = Swift.String
-  public static var allCases: [OpenRoaming.IdType] {
+  nonisolated public static var allCases: [OpenRoaming.IdType] {
     get
   }
   public var rawValue: Swift.String {
@@ -229,11 +233,11 @@ public struct KeyPair {
   public static func encrypt(publicKey: Swift.String, usingPublicKey: Swift.String) -> Swift.String?
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SigningView : UIKit.UIView, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate {
-  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
-  @_Concurrency.MainActor(unsafe) @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class SigningView : UIKit.UIView, WebKit.WKUIDelegate, WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
   @objc deinit
 }
 public enum OpenRoamingError : Swift.Error {
@@ -253,6 +257,8 @@ public enum OpenRoamingError : Swift.Error {
   case InvalidUserId
   case InvalidUserName
   case InvalidSocialNetworkId
+  case InvalidAge
+  case UserNotFound
   case DeviceCurrentDeleteSelfException
   case PushNotificationNotAssociatedException
   case UserAlreadyAssociatedException
@@ -282,7 +288,7 @@ public enum ServiceName : Swift.String, Swift.CaseIterable {
   public init?(rawValue: Swift.String)
   public typealias AllCases = [OpenRoaming.ServiceName]
   public typealias RawValue = Swift.String
-  public static var allCases: [OpenRoaming.ServiceName] {
+  nonisolated public static var allCases: [OpenRoaming.ServiceName] {
     get
   }
   public var rawValue: Swift.String {
